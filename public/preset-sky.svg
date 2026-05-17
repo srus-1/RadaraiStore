@@ -1,0 +1,13 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sky preset thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dff2ff"/>
+      <stop offset="100%" stop-color="#7cb9df"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <path d="M0 520C160 430 320 620 480 520C640 420 800 620 960 520C1040 470 1120 470 1200 520V750H0Z" fill="#4f8fb9" opacity="0.5"/>
+  <rect x="200" y="140" width="800" height="420" rx="30" fill="#ffffff" opacity="0.82"/>
+  <text x="600" y="350" text-anchor="middle" fill="#2b5d80" font-family="Georgia, serif" font-size="74">Ocean Elegance Sky</text>
+  <text x="600" y="420" text-anchor="middle" fill="#477a9f" font-family="Arial, sans-serif" font-size="24" letter-spacing="6">COASTAL PREMIUM</text>
+</svg>

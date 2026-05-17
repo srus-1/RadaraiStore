@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Warna Dasar / Background */
+    --background: 0 0% 100%; /* Putih bersih */
+    --foreground: 222.2 84% 4.9%; /* Teks gelap/Slate */
+
+    /* Warna Utama Pastel (Misal: Soft Peony / Pink) */
+    --primary: 330 80% 80%; 
+    --primary-foreground: 0 0% 100%;
+
+    /* Warna Aksen Pastel (Misal: Soft Lilac / Purple) */
+    --secondary: 270 60% 85%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Border & Elemen UI lainnya */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 330 80% 80%;
+
+    /* Radius lengkungan elemen biar estetik (nggak kaku) */
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@keyframes typing-caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes testimonial-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .typing-caret {
+    display: inline-block;
+    width: 0.12em;
+    height: 0.9em;
+    margin-left: 0.08em;
+    border-radius: 2px;
+    background-color: #5f58f6;
+    vertical-align: -0.08em;
+    animation: typing-caret-blink 1s steps(1) infinite;
+  }
+  .testimonial-marquee {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+  .testimonial-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 1.5rem;
+    animation: testimonial-marquee 48s linear infinite;
+  }
+  .btn-3d {
+    position: relative;
+    border-radius: 16px;
+    transform: translateY(0);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow:
+      0 0 20px rgba(31, 31, 31, 0.16),
+      0 0 6px rgba(31, 31, 31, 0.12),
+      0 0 0 1px rgba(15, 15, 15, 1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-3d:active {
+    transform: translateY(1px);
+    box-shadow:
+      0 0 12px rgba(31, 31, 31, 0.14),
+      0 0 4px rgba(31, 31, 31, 0.1),
+      0 0 0 1px rgba(15, 15, 15, 1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-3d-no-outline {
+    box-shadow:
+      0 0 18px rgba(31, 31, 31, 0.14),
+      0 0 6px rgba(31, 31, 31, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-3d-no-outline:active {
+    box-shadow:
+      0 0 10px rgba(31, 31, 31, 0.12),
+      0 0 4px rgba(31, 31, 31, 0.08),
+      inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-3d-soft {
+    box-shadow:
+      0 0 14px rgba(31, 31, 31, 0.08),
+      0 0 4px rgba(31, 31, 31, 0.06),
+      inset 0 1px 2px rgba(255, 255, 255, 0.18);
+  }
+
+  .btn-3d-soft:active {
+    box-shadow:
+      0 0 10px rgba(31, 31, 31, 0.07),
+      0 0 3px rgba(31, 31, 31, 0.06),
+      inset 0 1px 2px rgba(255, 255, 255, 0.18);
+  }
+
+  .btn-3d:focus-visible {
+    outline: 2px solid rgba(30, 33, 33, 0.5);
+    outline-offset: 2px;
+  }
+
+  .btn-3d-inverse {
+    --btn-3d-border: rgba(0, 0, 0, 0.7);
+  }
+}

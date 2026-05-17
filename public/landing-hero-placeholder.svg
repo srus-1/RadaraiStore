@@ -1,0 +1,24 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hero landscape placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b8ced6"/>
+      <stop offset="100%" stop-color="#7fa0ae"/>
+    </linearGradient>
+    <linearGradient id="hillA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6b9872"/>
+      <stop offset="100%" stop-color="#4c7a58"/>
+    </linearGradient>
+    <linearGradient id="hillB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f7d58"/>
+      <stop offset="100%" stop-color="#3f6848"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M0 520C210 470 360 530 560 500C760 470 960 360 1170 410C1340 450 1480 410 1600 370V900H0Z" fill="url(#hillA)"/>
+  <path d="M0 650C260 570 450 700 690 640C870 600 1050 500 1280 560C1420 600 1520 610 1600 590V900H0Z" fill="url(#hillB)"/>
+  <path d="M930 510L1035 460L1135 510L1040 560Z" fill="#c9b39a" opacity="0.75"/>
+  <path d="M250 610L350 560L445 610L352 660Z" fill="#cebca9" opacity="0.65"/>
+  <path d="M1240 650L1330 615L1415 650L1334 685Z" fill="#c9b39a" opacity="0.7"/>
+  <text x="800" y="455" text-anchor="middle" fill="#ffffff" opacity="0.78" font-family="Arial, sans-serif" font-size="150" font-weight="700">GAMBAR HERO</text>
+  <text x="800" y="540" text-anchor="middle" fill="#ffffff" opacity="0.74" font-family="Arial, sans-serif" font-size="48" font-weight="500">ganti file ini dengan foto landscape pilihanmu</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gold preset thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f1e3"/>
+      <stop offset="100%" stop-color="#d8c2a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="110" y="110" width="980" height="530" rx="28" fill="#3e3327" opacity="0.12"/>
+  <rect x="150" y="150" width="900" height="450" rx="24" fill="#fffaf0"/>
+  <line x1="210" y1="250" x2="990" y2="250" stroke="#b88646" stroke-width="3"/>
+  <line x1="210" y1="500" x2="990" y2="500" stroke="#b88646" stroke-width="3"/>
+  <text x="600" y="355" text-anchor="middle" fill="#6e4f2a" font-family="Georgia, serif" font-size="76">Rustic Earth Gold</text>
+  <text x="600" y="430" text-anchor="middle" fill="#9a7645" font-family="Arial, sans-serif" font-size="26" letter-spacing="6">EXCLUSIVE PRESET</text>
+</svg>

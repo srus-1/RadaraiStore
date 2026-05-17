@@ -1,0 +1,14 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luxe preset thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fdfdfd"/>
+      <stop offset="100%" stop-color="#eef3f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="180" y="120" width="840" height="510" rx="36" fill="#ffffff" stroke="#c4d0da" stroke-width="4"/>
+  <rect x="250" y="190" width="700" height="12" rx="6" fill="#d6e0e8"/>
+  <rect x="250" y="560" width="700" height="12" rx="6" fill="#d6e0e8"/>
+  <text x="600" y="370" text-anchor="middle" fill="#3f5f75" font-family="Georgia, serif" font-size="78">Clean White Luxe</text>
+  <text x="600" y="445" text-anchor="middle" fill="#6d8799" font-family="Arial, sans-serif" font-size="24" letter-spacing="7">MINIMAL EDITION</text>
+</svg>
