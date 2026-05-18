@@ -3,7 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import { MapPin, Calendar, Clock, Heart } from "lucide-react";
 
-export default function DemoPreset({ params }: { params: { id: string } }) {
+export default function DemoPreset() {
   // Animasi standar biar sat-set dan nggak perlu nulis ulang
   const fadeUp: Variants = {
     hidden: { opacity: 0, y: 30 },
@@ -55,7 +55,7 @@ export default function DemoPreset({ params }: { params: { id: string } }) {
         >
           <Heart className="w-8 h-8 mx-auto text-rose-300 mb-6" />
           <p className="text-lg sm:text-2xl font-serif italic text-slate-700 leading-relaxed">
-            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya..."
+            &quot;Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya...&quot;
           </p>
         </motion.div>
       </section>
@@ -84,7 +84,7 @@ export default function DemoPreset({ params }: { params: { id: string } }) {
               </p>
               <p className="flex items-center justify-center gap-2">
                 <MapPin className="w-5 h-5 text-rose-400" />
-                Masjid Raya Al-A'zhom
+                Masjid Raya Al-A&apos;zhom
               </p>
             </div>
             {/* Tombol Navigasi Sat-Set */}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Star } from "lucide-react";
 
 type TestimoniItem = {
@@ -105,11 +106,12 @@ export default function Testimoni() {
 									className="relative flex h-[320px] w-[210px] shrink-0 flex-col overflow-hidden rounded-[28px] bg-[#f2eee9] shadow-[0_18px_40px_rgba(17,19,29,0.16)] sm:h-[360px] sm:w-[240px] lg:h-[400px] lg:w-[260px]"
 								>
 									<div className="absolute inset-0">
-										<img
+										<Image
 											src={item.imageUrl}
 											alt={item.name}
-											className="h-full w-full object-cover"
-											loading="lazy"
+											fill
+											sizes="(max-width: 1024px) 240px, 260px"
+											className="object-cover"
 										/>
 									</div>
 									<div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-transparent" />

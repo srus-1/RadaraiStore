@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { MapPin, Calendar, Clock } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export default function CleanWhitePreset() {
   const fadeUp: Variants = {
@@ -38,7 +38,7 @@ export default function CleanWhitePreset() {
           className="max-w-xl mx-auto"
         >
           <p className="text-xl sm:text-3xl font-light text-zinc-800 leading-snug">
-            "Sederhana, selamanya."
+            &quot;Sederhana, selamanya.&quot;
           </p>
         </motion.div>
       </section>

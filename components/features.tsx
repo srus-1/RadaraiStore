@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
-import { 
-  Clock, Smartphone, MessageSquare, Share2, PencilLine, Bell, 
-  UserPlus, Image, MapPin, Music, MessageCircle, CreditCard, 
-  Languages, Heart, Video, Globe, Layers 
+import React, { useState } from "react";
+import {
+  Clock, Smartphone, MessageSquare, Share2, PencilLine, Bell,
+  UserPlus, Image, MapPin, Music, MessageCircle, CreditCard,
+  Languages, Heart, Video, Globe, Layers
 } from "lucide-react";
-import { useState } from "react";
 
 type FeatureItem = {
   title: string;
@@ -68,7 +67,7 @@ export default function Features() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {allFeatures.map((item, index) => (
+          {visibleFeatures.map((item, index) => (
             <div
               key={index}
               className={
@@ -77,7 +76,10 @@ export default function Features() {
                   : "rounded-2xl bg-[#f2f2f2] p-6 text-center"
               }
             >
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-[0_8px_24px_rgba(17,19,29,0.08)]">
+              <div
+                className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-[0_8px_24px_rgba(17,19,29,0.08)]"
+                aria-hidden="true"
+              >
                 {React.cloneElement(item.icon, { className: "h-6 w-6 text-[#5f58f6]" })}
               </div>
 

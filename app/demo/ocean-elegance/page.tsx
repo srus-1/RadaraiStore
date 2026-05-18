@@ -32,7 +32,7 @@ export default function ModernBluePreset() {
           </div>
 
           <p className="text-xs tracking-widest text-blue-800 uppercase max-w-xs mx-auto leading-relaxed">
-            "Isaiah 60:22 When the time is right, I, the Lord, will make it happen"
+            &quot;Isaiah 60:22 When the time is right, I, the Lord, will make it happen&quot;
           </p>
         </motion.div>
       </section>
@@ -98,7 +98,7 @@ export default function ModernBluePreset() {
           <div>
             <h4 className="text-lg italic mb-4 flex justify-center items-center gap-2"><Gift className="w-5 h-5"/> Gift guide:</h4>
             <p className="text-sm leading-relaxed text-blue-900/80">
-              With all that we have, we've been truly blessed. Your presence and prayers are all that we request. But if you desire to give nonetheless, A monetary gift is one we request.
+              With all that we have, we&apos;ve been truly blessed. Your presence and prayers are all that we request. But if you desire to give nonetheless, A monetary gift is one we request.
             </p>
           </div>
         </motion.div>

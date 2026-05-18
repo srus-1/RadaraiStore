@@ -1,12 +1,11 @@
 'use client';
 
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../app/globals.css"; // Pastikan path globals.css lo bener ya!
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -53,17 +52,13 @@ export default function RootLayout({
 
   const handleMobileNavClick = () => setIsMobileOpen(false);
 
-  useEffect(() => {
-    setIsMobileOpen(false);
-  }, [pathname]);
-
   return (
     <html lang="id">
       <body className={`${inter.className} bg-white text-slate-900`}>
-        <nav className="w-full border-b border-white/10 bg-[#1E2121]">
-          <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <nav className="relative z-50 w-full border-b border-white/10 bg-[#1E2121]">
+          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-0">
             <Link href="/" className="text-xl font-black tracking-tight text-white">
-              Radarai<span className="text-[#c7cbd9]">Store.</span>
+              Radarai<span className="text-[#76220b]">Store.</span>
             </Link>
 
             <div className="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex">
@@ -88,7 +83,7 @@ export default function RootLayout({
 
                       {/* Dropdown Menu */}
                       {openDropdown === item.label && (
-                        <div className="absolute left-0 top-full -mt-1 w-48 rounded-lg border border-[#e5e7eb] bg-white shadow-lg">
+                        <div className="absolute left-0 top-full -mt-1 w-48 rounded-lg border border-[#e5e7eb] bg-white shadow-lg z-50">
                           {menuItems[item.label as keyof typeof menuItems]?.map((subitem, index) => (
                             <Link
                               key={subitem.href}

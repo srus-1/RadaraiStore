@@ -42,7 +42,7 @@ export default function RusticEarthPreset() {
           className="max-w-2xl mx-auto"
         >
           <p className="text-lg sm:text-2xl font-serif text-stone-600 leading-relaxed">
-            "Seperti akar yang memeluk bumi, begitu pula kami mengikat janji untuk saling bertumbuh dan menopang satu sama lain."
+            &quot;Seperti akar yang memeluk bumi, begitu pula kami mengikat janji untuk saling bertumbuh dan menopang satu sama lain.&quot;
           </p>
         </motion.div>
       </section>

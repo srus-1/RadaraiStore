@@ -3,6 +3,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Features from "@/components/features";
@@ -57,18 +58,27 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <section className="mx-auto w-full max-w-6xl py-8 px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/lp_katalog"
-          className="mt-14  mb-2 block w-fit mx-auto sm:mt-12 sm:mb-4"
-        >
+      <section className="relative w-full min-h-[500px] sm:min-h-[600px] lg:min-h-[550px]">
+        <Image
+          src="/background/Background-Hero-Section.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          aria-hidden="true"
+          className="pointer-events-none select-none object-cover"
+          style={{ objectPosition: "center -95px" }}
+        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-b from-transparent to-white" />
+        <div className="relative z-10 mx-auto w-full max-w-6xl py-4 pl-0 pr-6 sm:pl-0 sm:pr-10 lg:pl-0 lg:pr-[32%]">
+          <div className="-ml-16 mt-10 mb- block w-fit sm:mt-12 sm:mb-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.35, delay: 0.12 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#e6e7ec] bg-white px-4 py-2 text-xs font-semibold text-[#6b7280] shadow-[0_8px_20px_rgba(17,19,29,0.06)]"
+            className="inline-flex items-center gap-2 backglass rounded-full px-4 py-2 text-xs font-semibold text-[#202436] shadow-[0_6px_18px_rgba(17,19,29,0.04)] shadow-3d-solid"
           >
-            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-[#e6e7ec] bg-[#f7f8fb] text-[#2f3445]">
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-[#e6e7ec] bg-[#f7f8fb] text-[#f97316]">
               <Sparkles className="h-3.5 w-3.5" />
             </span>
             <span className="sm:text-sm">
@@ -78,13 +88,13 @@ export default function Home() {
               </span>
             </span>
           </motion.div>
-        </Link>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="mx-auto mt-4 max-w-4xl pl-3 text-left sm:mt-10 sm:pl-0 sm:text-center"
+          className="-ml-16 mt-4 max-w-2xl text-left sm:mt-4"
         >
           <h1 className="text-balance text-4xl font-black leading-[1.05] tracking-tight text-[#11131d] sm:text-5xl lg:text-7xl">
             <span className="inline-block min-h-[1em]" aria-label={headingText}>
@@ -92,54 +102,86 @@ export default function Home() {
               <span className="typing-caret" aria-hidden="true" />
             </span>
             <br className="block" />
-            {" "}yang Gak Norak. <span className="text-[#5f58f6]">Titik!</span>
+            <span className="inline-flex items-baseline gap-2 whitespace-nowrap">
+              <span>yang Gak Norak.</span>
+              <span className="italic text-[#76220b]">Titik.</span>
+            </span>
           </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-[#676d80] sm:text-x">
-            Udah gak jaman undangan berat yang loadingnya bikin emosi. Sambut tamu lo dengan platform yang anti-lemot, mobile-first, dan punya estetika minimalis yang bikin mata adem.
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-900 text-[#6b5a52] sm:text-x">
+            Rayakan hari spesial mu dengan E-Invitation yang cepat, elegan, dan enak dilihat tanpa loading lama atau desain norak. Undangan digital yang 
+            <span className="font-bold italic"> mobile first,</span> minimalis, dan siap bikin tamu langsung impressed sejak klik pertama.
           </p>
 
-          <div className="mt-8 flex flex-row flex-wrap items-center gap-3 justify-start sm:justify-center">
+          <div className="mt-8 flex w-full flex-col items-start gap-3 lg:flex-row lg:items-center">
             <Link
               href="/lp_katalog"
-              className="btn-3d btn-3d-no-outline inline-flex h-12 items-center rounded-xl bg-[#5f58f6] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#4f48ea]"
+              className="btn-3d btn-3d-no-outline inline-flex h-12 w-full items-center justify-center !rounded-xl bg-[#1E2121] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#262a2a] lg:w-[200px]"
             >
               Buat Sekarang
             </Link>
             <Link
               href="/lp_katalog"
-              className="btn-3d btn-3d-soft inline-flex h-12 items-center rounded-xl border border-[#1f2430]/15 bg-white px-7 text-sm font-semibold text-[#202436] transition-colors hover:bg-[#f7f8fc]"
+              className="btn-3d btn-3d-soft inline-flex h-12 w-full items-center justify-center !rounded-xl border border-[#1f2430]/30 bg-white px-7 text-sm font-semibold text-[#202436] transition-colors hover:bg-[#f7f8fc] lg:w-[200px]"
             >
               Lihat Katalog Preset
             </Link>
           </div>
 
-          <div className="mt-8 inline-flex items-center gap-2 text-xs font-semibold text-gray-500 sm:rounded-xl sm:border sm:border-[#f4b7aa] sm:bg-[#fff7f5] sm:px-4 sm:py-2 sm:text-sm sm:text-[#f2644d]">
-            <span className="inline-flex items-center justify-center text-[10px] font-bold text-gray-500 sm:h-5 sm:w-5 sm:rounded-full sm:bg-white sm:text-[#e86855]">
-              #2
-            </span>
-            Product of the Day
-          </div>
-        </motion.div>
-      </section>
+          
+          </motion.div>
+        </div>
 
-      <div className="relative z-10 mx-auto -mt-6 mb-16 w-full max-w-[1400px] px-16 sm:px-8 lg:px-10">
-        <img
-          src="/svg/Safari%20Dark.svg"
-          alt="Safari dark preview"
-        />
-      </div>
+      </section>
+        <div className="mx-auto -1mb-16 w-full max-w-[1400px] px-16 sm:px-8">
+          <Image
+            src="/svg/Safari%20Dark.svg"
+            alt="Safari dark preview"
+            width={1366}
+            height={768}
+            className="h-auto w-full"
+          />
+        </div>
+
+        <section className="bg-transparent pb-32">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="testimonial-marquee rounded-lg bg-white/60 px-4 py-3 shadow-sm backdrop-blur-sm">
+              <div className="testimonial-marquee-track items-center">
+                <div className="flex items-center gap-6">
+                  <span className="text-sm text-slate-700">“Desainnya simpel & cepet, tamu pada suka.”</span>
+                  <span className="text-xs text-slate-500">Rina, pengantin</span>
+                </div>
+                <div className="flex items-center gap-6">
+                  <span className="text-sm text-slate-700">“Template-nya elegan, gampang custom.”</span>
+                  <span className="text-xs text-slate-500">Dito, event planner</span>
+                </div>
+                <div className="flex items-center gap-6">
+                  <span className="text-sm text-slate-700">“Support cepat dan ramah, recommended!”</span>
+                  <span className="text-xs text-slate-500">Sari, pengguna</span>
+                </div>
+                {/* duplicate for seamless loop */}
+                <div className="flex items-center gap-6">
+                  <span className="text-sm text-slate-700">“Desainnya simpel & cepet, tamu pada suka.”</span>
+                  <span className="text-xs text-slate-500">Rina, pengantin</span>
+                </div>
+                <div className="flex items-center gap-6">
+                  <span className="text-sm text-slate-700">“Template-nya elegan, gampang custom.”</span>
+                  <span className="text-xs text-slate-500">Dito, event planner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <Benefit />
-      <Pembatas className="my-16" />
+      <Pembatas className="my-8" />
       <Delivery />
-      <Pembatas className="my-16" />
+      <Pembatas className="my-8" />
       <Features />
-      <Pembatas className="my-16" />
+      <Pembatas className="my-8" />
       <Pricing />
-      <Pembatas className="my-16" />
+      <Pembatas className="my-8" />
       <Testimoni />
-      <Pembatas className="my-16" />
+      <Pembatas className="my-8" />
       <Faq />
       <Footer />
 

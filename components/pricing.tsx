@@ -1,9 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import { Check, Users } from "lucide-react";
 
+type PricingPlan = {
+  name: string;
+  price: string;
+  image: string;
+  features: string[];
+  color: string;
+  bestDeal?: boolean;
+};
+
 // Data paket sesuai referensi foto lu
-const pricingData = [
+const pricingData: PricingPlan[] = [
   {
     name: "BASIC",
     price: "50.000",
@@ -83,16 +93,18 @@ export default function Pricing() {
   );
 }
 
-function PricingCard({ plan }: { plan: any }) {
+function PricingCard({ plan }: { plan: PricingPlan }) {
   return (
     <div className={`relative flex flex-col overflow-hidden rounded-[32px] border border-[#eaecf3] bg-white transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]`}>
       
       {/* 1. Header Foto (Gaya Foto Kiri) */}
       <div className="relative h-44 w-full overflow-hidden">
-        <img 
-          src={plan.image} 
-          alt={plan.name} 
-          className="h-full w-full object-cover transition-transform duration-500 hover:scale-110" 
+        <Image
+          src={plan.image}
+          alt={plan.name}
+          fill
+          sizes="(max-width: 1024px) 100vw, 25vw"
+          className="object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>
 
