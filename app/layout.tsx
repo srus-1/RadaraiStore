@@ -54,7 +54,10 @@ export default function RootLayout({
 
   return (
     <html lang="id">
-      <body className={`${inter.className} bg-white text-slate-900`}>
+      <body
+        className={`${inter.className} bg-white text-slate-900`}
+        suppressHydrationWarning
+      >
         <nav className="relative z-50 w-full border-b border-white/10 bg-[#1E2121]">
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-0">
             <Link href="/" className="text-xl font-black tracking-tight text-white">
